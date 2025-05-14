@@ -8,11 +8,11 @@ import timm
 import os
 
 # --- AYARLAR ---
-model_path = "model.pt"  # .pt olarak kaydedilmiş model dosyan
+model_path = "models/animal_classifier.pt"
 
 class_names = ['antelope', 'badger', 'bat', 'bear', 'bee', 'beetle', 'bison',
                'boar', 'butterfly', 'cat', 'caterpillar', 'chimpanzee', 'cockroach',
-               'cow', 'coyote', 'crab', 'crow', 'deer', 'dog', 'dolphin', 'donkey',
+               'cow', 'coyote', 'crab', 'crow', 'deer', 'dog.jpg', 'dolphin', 'donkey',
                'dragonfly', 'duck', 'eagle', 'elephant', 'flamingo', 'fly', 'fox',
                'goat', 'goldfish', 'goose', 'gorilla', 'grasshopper', 'hamster', 'hare',
                'hedgehog', 'hippopotamus', 'hornbill', 'horse', 'hummingbird', 'hyena',
@@ -64,7 +64,7 @@ def process_image(file_path):
 
 # --- DOSYA SEÇİCİ KULLAN ---
 def load_image():
-    file_path = filedialog.askopenfilename(filetypes=[("Görseller", "*.jpg *.jpeg *.png")])
+    file_path = filedialog.askopenfilename(filetypes=[("Görseller", "*.jpg *.jpeg *.png *.avif *.webp *.jpeg")])
     if file_path:
         process_image(file_path)
 
